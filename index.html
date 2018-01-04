@@ -36,34 +36,39 @@
           </p>
         </div>
       </div>
+      <div class="divider"></div>
 
       <!-- Pour l'image -->
       <div class="block grey section">
         <div class="container">
-          <h1>Image</h1>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
-            Donec nisi elit, suscipit et pretium non, vestibulum nec ante.
-            In tristique sagittis eleifend. Praesent consectetur justo orci, sed scelerisque quam venenatis dictum. Nam vestibulum libero quis nunc hendrerit, non ornare nulla malesuada. Nunc sollicitudin maximus urna, a fringilla odio vehicula non. Nullam aliquet purus odio, non fringilla libero suscipit non. Cras ultricies et tortor ut sodales.
-          </p>
-          <p>
-            Pellentesque aliquam diam id magna euismod, et euismod mi tincidunt. Fusce aliquet ex ut ipsum facilisis, id venenatis diam tincidunt. Suspendisse laoreet diam et varius viverra. In erat felis, venenatis sit amet commodo sed, consequat vitae quam. Donec nec dui aliquam, porta urna id, commodo ligula. Donec euismod commodo mollis. Duis eleifend nibh vel urna mollis consectetur. Duis rhoncus eros blandit, bibendum nunc a, ultricies lorem. Sed pulvinar nunc eu eros consectetur pharetra. Vivamus sollicitudin lacinia lacinia.
-          </p>
-          <p>
-            Aenean sollicitudin consequat nisl sit amet finibus. Fusce ultrices consequat feugiat. Vivamus facilisis nisi sed dolor vulputate, sit amet aliquet justo eleifend. Maecenas maximus lacus sed nisl ultricies mattis. Cras id dolor nec tellus cursus consectetur. Cras nunc nulla, rhoncus posuere sodales nec, cursus in leo. In placerat neque sed urna molestie, non ornare mauris euismod. Quisque tempus rhoncus mattis.
-          </p>
-          <p>
-            Morbi elementum et lorem in malesuada. Vestibulum nec neque a est imperdiet tincidunt. Pellentesque sed nunc id ante feugiat sagittis vel ut tortor. Morbi mollis diam ligula. Maecenas rhoncus augue sed turpis efficitur porttitor. Aenean sed rutrum sem, vel laoreet est. Mauris venenatis erat ac lorem faucibus sagittis. Phasellus quis fringilla elit. Curabitur nulla urna, maximus ullamcorper eleifend eget, dictum et ex. Nam magna libero, finibus in egestas vitae, sodales a massa. Nunc tristique elit ac sapien mollis pellentesque ut id lacus.
-          </p>
-          <p>
-            Etiam mattis imperdiet justo, nec sagittis metus fermentum eget. Nam quis iaculis ligula, eu gravida dolor. Pellentesque accumsan et ex ut dapibus. Curabitur sed diam non tellus euismod pellentesque. Etiam massa neque, laoreet ac augue nec, laoreet bibendum eros. Maecenas eu nibh turpis. Pellentesque id lacus suscipit, placerat justo vitae, posuere nisi.
-          </p>
+          <img id="image" class="col responsive-img" src="img/image.jpg" style="display:inline" onclick="mouseOver(event, this)" onmousemove="mouseMove(event, this)">
+          <a href="https://soundcloud.com/tiphaine-chocapic/introduction">
+            <img id="image1" class="col responsive-img" src="img/image1.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
+          </a>
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-1">
+            <img id="image2" class="col responsive-img" src="img/image2.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
+          </a>
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-2">
+            <img id="image3" class="col responsive-img" src="img/image3.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
+          </a>
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-3">
+            <img id="image4" class="col responsive-img" src="img/image4.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
+          </a>
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-4">
+            <img id="image5" class="col responsive-img" src="img/image5.jpg" style="display:inline" onmousemove="mouseMove(event, this)">
+          </a>
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-5">
+            <img id="image6" class="col responsive-img" src="img/image6.jpg" style="display:inline" onmousemove="mouseMove(event, this)">
+          </a>
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-6-les-structures-independantes-de-diffusion">
+            <img id="image7" class="col responsive-img" src="img/image7.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
+          </a>
         </div>
       </div>
+      <div class="divider"></div>
 
       <!-- Bibliographie -->
-      <div class="block yellow section">
+      <div class="block white section">
       <div class="container">
         <h1>Bibliographie</h1>
 
@@ -86,6 +91,7 @@
         </p>
       </div>
     </div>
+    <div class="divider"></div>
 
       <!-- Remerciement Contact -->
       <div class="block grey section">
@@ -111,28 +117,103 @@
           </p>
         </div>
       </div>
+      <div class="divider"></div>
 
 
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <!--A faire-->
       <script type="text/javascript">
-        $(document).ready(function(){
-        $('.target').pushpin({
-            top: 0,
-            bottom: 1000,
-            offset: 0});
-        });
 
-        $('.pushpin-demo-nav').each(function() {
-          var $this = $(this);
-          var $target = $('#' + $(this).attr('data-target'));
-          $this.pushpin({
-            top: $target.offset().top,
-            bottom: $target.offset().top + $target.outerHeight() - $this.height()
-          });
-        });
+      function getWindowHeight() {
+        var windowHeight=0;
+        if (typeof(window.innerHeight)=='number') {
+          windowHeight=window.innerHeight;
+          } else {
+            if (document.documentElement&& document.documentElement.clientHeight) {
+                windowHeight = document.documentElement.clientHeight;
+            } else {
+                if (document.body&&document.body.clientHeight) {
+                    windowHeight=document.body.clientHeight;
+                }
+            }
+        }
+        return windowHeight;
+      }
 
+      windowHeight =  getWindowHeight();
+      maxImg = windowHeight - 30 ;
+      maxImg = maxImg+"px";
+
+
+      document.getElementById('image').style.maxHeight=maxImg;
+      document.getElementById('image1').style.maxHeight=maxImg;
+      document.getElementById('image2').style.maxHeight=maxImg;
+      document.getElementById('image3').style.maxHeight=maxImg;
+      document.getElementById('image4').style.maxHeight=maxImg;
+      document.getElementById('image5').style.maxHeight=maxImg;
+      document.getElementById('image6').style.maxHeight=maxImg;
+      document.getElementById('image7').style.maxHeight=maxImg;
+
+      document.getElementById('image1').style.display="none";
+      document.getElementById('image2').style.display="none";
+      document.getElementById('image3').style.display="none";
+      document.getElementById('image4').style.display="none";
+      document.getElementById('image5').style.display="none";
+      document.getElementById('image6').style.display="none";
+      document.getElementById('image7').style.display="none";
+
+
+      function mouseOver(event,image_actuellement_affichee) {
+        var posX = event.offsetX?(event.offsetX):event.pageX-img.offsetLeft;
+        var posY = event.offsetY?(event.offsetY):event.pageY-img.offsetTop;
+        var coefficient = 4096 / image_actuellement_affichee.width;
+        posX = posX * coefficient;
+        posY = posY * coefficient;
+        alert("You clicked at: ("+posX+","+posY+")");
+      }
+
+      function mouseMove(event,image_actuellement_affichee) {
+        var posX = event.offsetX?(event.offsetX):event.pageX-img.offsetLeft;
+        var posY = event.offsetY?(event.offsetY):event.pageY-img.offsetTop;
+        var coefficientX = 4096 / image_actuellement_affichee.width;
+        var coefficientY = 2896 / image_actuellement_affichee.height;
+        posX = posX * coefficientX;
+        posY = posY * coefficientY;
+        if ( posX>=561 && posX<=840 && posY>=1360 && posY <=2350){
+          image_actuellement_affichee.style.display="none";
+          document.getElementById('image1').style.display='inline';
+        }
+        else if (posX>=1021 && posX<=1280 && posY>=440 && posY<=2000){
+          image_actuellement_affichee.style.display="none";
+          document.getElementById('image2').style.display='inline';
+        }
+        else if( posX>=860 && posX<=1300 && posY>=2100 && posY<=2400){
+          image_actuellement_affichee.style.display="none";
+          document.getElementById('image3').style.display='inline';
+        }
+        else if (posX>=1475 && posX<=2275 && posY>=1450 && posY<=2400){
+          image_actuellement_affichee.style.display="none";
+          document.getElementById('image4').style.display='inline';
+        }
+        else if (posX>=1960 && posX<=2500 && posY>=590 && posY<=1400){
+          image_actuellement_affichee.style.display="none";
+          document.getElementById('image5').style.display='inline';
+        }
+        else if (posX>=2501 && posX<=3800 && posY>=1320 && posY<=2230){
+          image_actuellement_affichee.style.display="none";
+          document.getElementById('image6').style.display='inline';
+        }
+        else if (posX>=2568 && posX<=3086 && posY>=430 && posY<=1000){
+          image_actuellement_affichee.style.display="none";
+          document.getElementById('image7').style.display='inline';
+        }
+        else {
+          image_actuellement_affichee.style.display="none";
+          document.getElementById('image').style.display='inline';
+        }
+      }
       </script>
     </body>
   </html>
