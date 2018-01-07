@@ -13,7 +13,7 @@
     </head>
 
     <body>
-      <div class="block white section ">
+      <div class="block white section">
         <div class="container">
           <h1>Avant-propos</h1>
 
@@ -39,30 +39,40 @@
       <div class="divider"></div>
 
       <!-- Pour l'image -->
-      <div class="block grey section">
+      <div class="block section" style="background-color:#b12c37;">
         <div class="container">
-          <img id="image" class="col responsive-img" src="img/image.jpg" style="display:inline" onclick="mouseOver(event, this)" onmousemove="mouseMove(event, this)">
-          <a href="https://soundcloud.com/tiphaine-chocapic/introduction">
-            <img id="image1" class="col responsive-img" src="img/image1.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
+          <img id="image" class="col responsive-img" src="image/base.jpg" style="display:inline" onclick="mouseOver(event, this)" onmousemove="mouseMove(event, this)">
+          <a href="https://soundcloud.com/tiphaine-chocapic/introduction" target="_blank">
+            <img id="image1" class="col responsive-img" src="image/intro.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
           </a>
-          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-1">
-            <img id="image2" class="col responsive-img" src="img/image2.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-1" target="_blank">
+            <img id="image2" class="col responsive-img" src="image/partie1.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
           </a>
-          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-2">
-            <img id="image3" class="col responsive-img" src="img/image3.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-2" target="_blank">
+            <img id="image3" class="col responsive-img" src="image/partie2.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
           </a>
-          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-3">
-            <img id="image4" class="col responsive-img" src="img/image4.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-3" target="_blank">
+            <img id="image4" class="col responsive-img" src="image/partie3.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
           </a>
-          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-4">
-            <img id="image5" class="col responsive-img" src="img/image5.jpg" style="display:inline" onmousemove="mouseMove(event, this)">
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-4" target="_blank">
+            <img id="image5" class="col responsive-img" src="image/partie4.jpg" style="display:inline" onmousemove="mouseMove(event, this)">
           </a>
-          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-5">
-            <img id="image6" class="col responsive-img" src="img/image6.jpg" style="display:inline" onmousemove="mouseMove(event, this)">
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-5" target="_blank">
+            <img id="image6" class="col responsive-img" src="image/partie5.jpg" style="display:inline" onmousemove="mouseMove(event, this)">
           </a>
-          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-6-les-structures-independantes-de-diffusion">
-            <img id="image7" class="col responsive-img" src="img/image7.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-6-les-structures-independantes-de-diffusion" target="_blank">
+            <img id="image7" class="col responsive-img" src="image/partie6.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
           </a>
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-6-les-structures-independantes-de-diffusion" target="_blank">
+            <img id="annexe1" class="col responsive-img" src="image/annexe1.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
+          </a>
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-6-les-structures-independantes-de-diffusion" target="_blank">
+            <img id="annexe2" class="col responsive-img" src="image/annexe2.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
+          </a>
+          <a href="https://soundcloud.com/tiphaine-chocapic/chapitre-6-les-structures-independantes-de-diffusion" target="_blank">
+            <img id="annexe3" class="col responsive-img" src="image/annexe3.jpg" style="display:inline"  onmousemove="mouseMove(event, this)">
+          </a>
+
         </div>
       </div>
       <div class="divider"></div>
@@ -143,7 +153,7 @@
       }
 
       windowHeight =  getWindowHeight();
-      maxImg = windowHeight - 30 ;
+      maxImg = windowHeight;
       maxImg = maxImg+"px";
 
 
@@ -163,6 +173,9 @@
       document.getElementById('image5').style.display="none";
       document.getElementById('image6').style.display="none";
       document.getElementById('image7').style.display="none";
+      document.getElementById('annexe1').style.display="none";
+      document.getElementById('annexe2').style.display="none";
+      document.getElementById('annexe3').style.display="none";
 
 
       function mouseOver(event,image_actuellement_affichee) {
@@ -177,37 +190,49 @@
       function mouseMove(event,image_actuellement_affichee) {
         var posX = event.offsetX?(event.offsetX):event.pageX-img.offsetLeft;
         var posY = event.offsetY?(event.offsetY):event.pageY-img.offsetTop;
-        var coefficientX = 4096 / image_actuellement_affichee.width;
-        var coefficientY = 2896 / image_actuellement_affichee.height;
+        var coefficientX = 8087 / image_actuellement_affichee.width;
+        var coefficientY = 5148 / image_actuellement_affichee.height;
         posX = posX * coefficientX;
         posY = posY * coefficientY;
-        if ( posX>=561 && posX<=840 && posY>=1360 && posY <=2350){
+        if ( posX>=457 && posX<=1000 && posY>=2400 && posY <=4600){
           image_actuellement_affichee.style.display="none";
           document.getElementById('image1').style.display='inline';
         }
-        else if (posX>=1021 && posX<=1280 && posY>=440 && posY<=2000){
+        else if (posX>=1400 && posX<=1900 && posY>=650 && posY<=4000){
           image_actuellement_affichee.style.display="none";
           document.getElementById('image2').style.display='inline';
         }
-        else if( posX>=860 && posX<=1300 && posY>=2100 && posY<=2400){
+        else if( posX>=1050 && posX<=3000 && posY>=4200 && posY<=4750){
           image_actuellement_affichee.style.display="none";
           document.getElementById('image3').style.display='inline';
         }
-        else if (posX>=1475 && posX<=2275 && posY>=1450 && posY<=2400){
+        else if (posX>=2300 && posX<=4000 && posY>=2600 && posY<=4400){
           image_actuellement_affichee.style.display="none";
           document.getElementById('image4').style.display='inline';
         }
-        else if (posX>=1960 && posX<=2500 && posY>=590 && posY<=1400){
+        else if (posX>=3450 && posX<=4450 && posY>=800 && posY<=2600){
           image_actuellement_affichee.style.display="none";
           document.getElementById('image5').style.display='inline';
         }
-        else if (posX>=2501 && posX<=3800 && posY>=1320 && posY<=2230){
+        else if (posX>=4400 && posX<=7100 && posY>=2500 && posY<=4500){
           image_actuellement_affichee.style.display="none";
           document.getElementById('image6').style.display='inline';
         }
-        else if (posX>=2568 && posX<=3086 && posY>=430 && posY<=1000){
+        else if (posX>=4580 && posX<=5480 && posY>=600 && posY<=1800){
           image_actuellement_affichee.style.display="none";
           document.getElementById('image7').style.display='inline';
+        }
+        else if (posX>=5500 && posX<=5950 && posY>=750 && posY<=1300){
+          image_actuellement_affichee.style.display="none";
+          document.getElementById('annexe1').style.display='inline';
+        }
+        else if (posX>=6100 && posX<=6450 && posY>=700 && posY<=1240){
+          image_actuellement_affichee.style.display="none";
+          document.getElementById('annexe2').style.display='inline';
+        }
+        else if (posX>=6000 && posX<=6400 && posY>=1420 && posY<=1840){
+          image_actuellement_affichee.style.display="none";
+          document.getElementById('annexe3').style.display='inline';
         }
         else {
           image_actuellement_affichee.style.display="none";
