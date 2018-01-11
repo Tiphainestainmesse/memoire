@@ -1,11 +1,11 @@
 @font-face {
-     font-family: applegaramond;
-     src: url(../fonts/apple_garamond/AppleGaramond.ttf);
-   }
+  font-family: applegaramond;
+  src: url(../fonts/apple_garamond/AppleGaramond.ttf);
+}
 
 @font-face {
-  font-family: made;
-  src: url(../fonts/Optima.ttf);
+  font-family: titre;
+  src: url(../fonts/Typo-Grotesk-Demo.otf);
 }
 
 html {
@@ -15,7 +15,7 @@ html {
 }
 
 h1 {
-  font-family: made;
+  font-family: titre;
   font-size:larger;
 }
 
